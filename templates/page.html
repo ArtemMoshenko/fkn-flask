@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+</head>
+<body>
+    {% for item in news['news'] %}
+        <h2>Фильм {{item["film"]}} вышел в {{item["data"]}} году. Оценка пользователей: {{item["mark"]}}.</h2>
+        <div>
+            {{item["content"]}}
+
+        </div>
+    <input type="your_mark" text class="form-control" name="exampleInputMark" aria-describedby="markHelp">
+    <button type="mark" class="btn btn-primary" name ="mark_button">Оценить фильм от 1 до 10</button>
+
+    {% endfor %}
+</body>
+</html>
